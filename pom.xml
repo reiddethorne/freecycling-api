@@ -9,23 +9,11 @@
 		<relativePath/>
 	</parent>
 	<groupId>freecycling.example</groupId>
-	<artifactId>freecycling</artifactId>
+	<artifactId>freecycling-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<name>FreeCycling API</name>
+	<description>REST API for a community item-donation and reuse platform</description>
+	<url>https://github.com/reiddethorne/freecycling-api</url>
 	<properties>
 		<java.version>22</java.version>
 	</properties>

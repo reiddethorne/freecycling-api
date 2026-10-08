@@ -1,5 +1,6 @@
 package freecycling.example.freecycling.services;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.password4j.BcryptFunction;
@@ -9,8 +10,12 @@ import com.password4j.types.Bcrypt;
 
 @Service
 public class PasswordService {
-	
-	static private final String secret="CMSC455";
+
+	private final String secret;
+
+	public PasswordService(@Value("${app.security.password-pepper}") String secret) {
+		this.secret = secret;
+	}
 	
 	public String hashPassword(String password) {
 		BcryptFunction bcrypt = BcryptFunction.getInstance(Bcrypt.B, 12);

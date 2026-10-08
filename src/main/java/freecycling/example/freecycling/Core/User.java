@@ -1,5 +1,7 @@
 package freecycling.example.freecycling.Core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,6 +22,7 @@ public class User {
     private String userName;
 
     @Column(name = "Pass")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String pass;
 
     @Column(name = "Email")

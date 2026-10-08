@@ -1,12 +1,15 @@
 package freecycling.example.freecycling.security;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 import javax.crypto.SecretKey;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 
 /**
  * We use the jjwt library to create JWTs.
@@ -18,7 +21,11 @@ import io.jsonwebtoken.Jwts;
 @Service
 public class JwtService {
 
-	SecretKey key = Jwts.SIG.HS256.key().build();
+	private final SecretKey key;
+
+	public JwtService(@Value("${app.security.jwt-secret}") String jwtSecret) {
+		this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes(StandardCharsets.UTF_8));
+	}
 
 	public boolean isValid(String token) {
 		try {

@@ -1,4 +1,23 @@
-target/classes/freecycling/example/freecycling/.DS_Store
-/target
-src/main/resources/application.properties
-target/classes/application.properties
+# Build output
+target/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+src/main/resources/application-local.properties
+
+# Editor settings
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Operating-system files
+.DS_Store
+**/.DS_Store
+
+# Logs
+*.log
