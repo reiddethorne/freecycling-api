@@ -2,7 +2,7 @@
 
 FreeCycling is a Spring Boot REST API for a community reuse platform. Users can list items they no longer need, express interest in available items, and coordinate handoffs through shared transfer locations and meeting times.
 
-This repository contains the backend service. It was developed collaboratively as an academic software engineering project.
+This repository contains the backend service. It was developed collaboratively as the final project for CMSC 455 Backend Programming
 
 ## Features
 
